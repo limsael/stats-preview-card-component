@@ -1,0 +1,136 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca&display=swap");
+/* Reset CSS */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  padding: 3rem 1.5rem;
+  font-size: 0.9375rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style by order*/
+.card {
+  display: grid;
+  gap: 1.95rem;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.6rem;
+}
+.card__image {
+  position: relative;
+}
+.card__img-mobile {
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+.card__img-desktop {
+  display: none;
+}
+.card__image-overlay {
+  background-color: hsl(277, 64%, 61%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+.card__content, .card__stats {
+  padding-inline: 1rem;
+  text-align: center;
+}
+.card__content {
+  display: grid;
+}
+.card__title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  margin-block-end: 0.9rem;
+  font-size: 2rem;
+}
+.card__title-span {
+  color: hsl(277, 64%, 61%);
+}
+.card__text {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+  margin-block-end: 1.5rem;
+}
+.card__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-block-end: 1.9rem;
+}
+.card__stats-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card__stats-item span:first-of-type {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.card__stats-item span:last-of-type {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+  }
+  .card {
+    max-width: 730px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card__image {
+    order: 2;
+  }
+  .card__img-mobile {
+    display: none;
+  }
+  .card__img-desktop {
+    display: block;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+  }
+  .card__image-overlay {
+    border-bottom-right-radius: 0.6rem;
+  }
+  .card__content, .card__stats {
+    text-align: left;
+  }
+  .card__content {
+    gap: 1em;
+    padding: 2rem 2.5rem;
+  }
+  .card__title {
+    font-size: 1.5rem;
+  }
+  .card__text {
+    margin-block-end: 1.9rem;
+  }
+  .card__stats {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

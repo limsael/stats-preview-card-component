@@ -1,0 +1,35 @@
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+$slightly-transparent-white-stats: hsla(0, 0%, 100%, 0.6);
+$desktop: 768px;
+
+/* Google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca&display=swap");
+
+/* Reset CSS */
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $very-dark-blue;
+  padding: 3rem 1.5rem;
+  font-size: 0.9375rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
